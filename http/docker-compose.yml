@@ -1,13 +1,14 @@
 version: "3"
 services:
   nginx:
-    image: mynginx
+    image: fabiocicerchia/nginx-lua
     build:
       dockerfile: Dockerfile
       context: . 
     container_name: nginx-http-reverse-proxy
     env_file:
       - nginx.env
+    ports:
+      - 80:80
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-    network_mode: host
