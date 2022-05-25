@@ -1,10 +1,19 @@
-# reverse-proxy-examples
-HTTP Reverse proxy setup examples
+# About
+
+HTTP Reverse proxys setup examples.
+
+
+
+
+![proxy](misc/proxy.png)
+
 
 ## http
 
-Using Nginx to serve http requests to a downstream http service listening on 
-arbitrary port.
+This example uses Nginx to serve http requests to an upstream http service listening on 
+arbitrary port. 
 
 
- 
+## http_ec2
+
+Same as previous `http` example 
