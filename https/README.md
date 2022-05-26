@@ -1,7 +1,7 @@
 # About
 
 This example will demonstrate using nginx to proxy requests to a http service.
-nginx is terminating ssl in this request.
+nginx is terminating ssl in this example.
 
 - **upsteam host**  host running service nginx will proxy connections too
 - **proxy host**  host running nginx
@@ -20,7 +20,7 @@ nginx is terminating ssl in this request.
 └── nginx.env # enviroment variable used to template nginx.conf
 ```
 
-## Prerequistes
+## Prerequisites
 
 - host with docker/docker-compose installed
 - ingress between upstream and proxy hosts established

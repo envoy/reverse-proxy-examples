@@ -16,9 +16,9 @@ to another ec2 instance on a private subnet.
 └── nginx.env # enviroment variable used to template nginx.conf
 ```
 
-# Prerequistes
+# Prerequisites
 
-- AWS creditianls & aws cli installed 
+- AWS credentials & aws cli installed 
 - VPC & subnets provisioned in an aws region
 
 # Installing nginx on ec2
@@ -72,7 +72,7 @@ navigate to your nginx conf settings
 cd /home/ubuntu/http_ec2 
 ```
 
-seed  enviroment variables (nginx.env)
+seed environment variables (nginx.env)
 ```
 tee -a nginx.env << END
 HTTP_SERVICE_PORT=80
@@ -87,7 +87,7 @@ sudo docker ps # confirm the container is running
 sudo docker logs nginx-http-reverse-proxy # check nginx logs
 ```
 
-use an http client/downloader to test your proxy
+use a http client/downloader to test your proxy
 ```
 wget localhost:80
 ```

@@ -18,7 +18,7 @@ Both nginx and the service share the same host in this example (localhost).
 └── nginx.env # enviroment variable used to template nginx.conf
 ```
 
-## Prerequistes
+## Prerequisites
 
 - host with docker/docker-compose installed
 - ingress between upstream and proxy hosts established
