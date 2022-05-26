@@ -3,10 +3,10 @@
 Using a reverse proxy allows for ingress establishment to your internal integrations (ie c-cure 9000)
 without exposing other services on your network.
 
-> **DISCLAIMER**: The examples documented in this repo aim to be functioning references. 
+The examples documented in this repo aim to be functioning references. 
 For production usage additional hardening steps need to be taken on both the host server and your proxy (ie nginx).
 
-![proxy](misc/proxy.png)
+![https](../misc/https_whitelist.png)
 
 
 ## http

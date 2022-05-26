@@ -1,15 +1,13 @@
 # About
 
-This example uses `nginx` to proxy http requests
-from an ec2 insance on a public subnet (network) to another ec2 instance on 
-a private subnet. 
+This example uses `nginx` to proxy http requests from an ec2 insance on a public subnet (network) 
+to another ec2 instance on a private subnet. 
 
-*upsteam host*  ec2 instance running service nginx will proxy too
+*upsteam host*  ec2 instance running service nginx will proxy connections too
 *proxy host*  ec2 instance running nginx
 
 
-This 
-
+### files
 
 ```
 ├── Dockerfile # docker image used to run nginx
@@ -73,18 +71,17 @@ Confirm the network route is establised between proxy host and upstream host
 nc -vz <upsteam host private ip> 80
 ```
 
-
 navigate to your nginx conf settings
 ```
 cd /home/ubuntu/http_ec2 
 ```
 
-set your nginx.env
+seed  enviroment variables (nginx.env)
 ```
-tee <<EOF > nginx.env
+tee -a nginx.env << END
 HTTP_SERVICE_PORT=80
 HTTP_SERVICE=<upsteam host private ip>
-EOF 
+END
 ```
 
 start the nginx container
@@ -98,6 +95,33 @@ use an http client/downloader to test your proxy
 ```
 wget localhost:80
 ```
+
+### notes
+
+Your `nginx.conf` may differ based on the version you run, your upstream service's setup and several other factor.
+( ie Some http servers may require certain request headers be appended to nginx) 
+
+
+For an http service listening on port `80` you may need to omit a port suffix `$HTTP_SERVICE_PORT`
+```
+    location / {
+       proxy_pass http://$HTTP_SERVICE;
+    }
+ ```
+
+For an http service listening on port an arbitrary port (8080) you may need to include a port suffix `$HTTP_SERVICE_PORT`
+```
+    location / {
+       proxy_pass http://$HTTP_SERVICE:$HTTP_SERVICE_PORT;
+       # proxy_pass http://172.31.53.136:8080
+    }
+ ```
+
+
+### versions used
+- 20.04.1-Ubuntu
+- Docker version 20.10.12
+- docker-compose version 1.25.0
 
 
 # Resources
