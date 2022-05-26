@@ -1,11 +1,11 @@
 # About
+> :warning:  **not suitable for production** : please use for testing/reference
 
 This example uses `nginx` to proxy http requests from an ec2 insance on a public subnet (network) 
 to another ec2 instance on a private subnet. 
 
-*upsteam host*  ec2 instance running service nginx will proxy connections too
-*proxy host*  ec2 instance running nginx
-
+- **upsteam host:**  ec2 instance running service nginx will proxy connections too
+- **proxy host:**  ec2 instance running nginx
 
 ### files
 
@@ -16,12 +16,10 @@ to another ec2 instance on a private subnet.
 └── nginx.env # enviroment variable used to template nginx.conf
 ```
 
-
 # Prerequistes
 
 - AWS creditianls & aws cli installed 
 - VPC & subnets provisioned in an aws region
-
 
 # Installing nginx on ec2
 
@@ -51,8 +49,6 @@ Setup sg ingress from proxy host to upstream host
 ```
 aws ec2 authorize-security-group-ingress --group-id <upsteam host sg-id>   --protocol tcp --port 80 --source-group <proxy host sg-id> 
 ```
-
-
 
 ### Install example nginx proxy on ec2
 

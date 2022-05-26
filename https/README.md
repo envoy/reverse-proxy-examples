@@ -3,9 +3,13 @@
 This example will demonstrate using nginx to proxy requests to a http service.
 nginx is terminating ssl in this request.
 
-*upsteam host*  host running service nginx will proxy connections too
-*proxy host*  host running nginx
-*proxy dns record* dns A record pointing to proxy host/network address (ie proxy-A.record.com)
+- **upsteam host**  host running service nginx will proxy connections too
+- **proxy host**  host running nginx
+- **proxy dns record** dns record (type A) pointing to proxy host/network address (ie proxy-A.record.com)
+
+
+![https](../misc/https.png)
+
 
 ## Files
 
@@ -72,14 +76,18 @@ nc -zv proxy-A.record.com 443
 - docker-compose version 1.29.2
 - macOS 12.0.1 (21A559)
 - zsh 5.8 (x86_64-apple-darwin21.0)
+- certbot 0.40.0
 
 ### certbot install
+
+This example used ssl certs created with `certbot`
 ```
  apk add certbot python3 python3-dev py3-pip 
  certbot --nginx -d << proxy-A.record.com  -d proxy-A.record.com 
 ```
 
 # Resources
+- https://letsencrypt.org/
 - https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/
 - https://geko.cloud/en/nginx-letsencrypt-certbot-docker-alpine/
 - https://docs.nginx.com/nginx/admin-guide/security-controls/securing-http-traffic-upstream/

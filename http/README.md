@@ -53,3 +53,6 @@ nc -zv localhost 80
 - docker-compose version 1.29.2
 - macOS 12.0.1 (21A559)
 - zsh 5.8 (x86_64-apple-darwin21.0)
+
+# Resourcces
+- https://pythonbasics.org/webserver/ (`python3 -m http.server 8000`)

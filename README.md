@@ -11,21 +11,16 @@ For production usage additional hardening steps need to be taken on both the hos
 
 ## http
 
-Nginx to serve http requests to an upstream http service listening on 
-arbitrary port. 
+nginx to serve http requests to an upstream http service listening on 
+arbitrary port. suitable for testing and confirming internal firewall routes are in place.
 
 ## https
 
-nginx configuration to terminate ssl at the proxy.
+nginx configuration to terminate ssl at the proxy and proxy requests to an internal service over http.
 
-## http_ec2
+### ccure
 
-Same as previous `http` example with additional steps to run in AWS EC2 on an ubuntu host.
-
-
-## ccure
-
-High level instructions to use nginx to proxy request to a C-CURE 9000 server.
+High level instructions/example to use nginx to proxy request to a C-CURE 9000 server.
 
 
 # Resources
