@@ -1,15 +1,13 @@
 # About
+> :warning:  **not suitable for production** : please use for testing/reference
 
 This example will demonstrate using nginx to proxy requests to a http service.
 Both nginx and the service share the same host in this example (localhost).
 
-*upsteam host*  host running service nginx will proxy connections too
-*proxy host*  host running nginx
-
-> :warning:  **not suitable for production** : please use for testing/reference
+- **upsteam host:**  host running service nginx will proxy connections too
+- **proxy host:**  host running nginx
 
 ![http](../misc/https.png)
-
 
 ## Files
 
