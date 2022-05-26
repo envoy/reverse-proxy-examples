@@ -122,8 +122,12 @@ docker-compose up
 ## Update your integration
 
 Add your proxy dns entry to `Instance URL` 
+
 Click `Next Step` 
+
 ![ccure](../misc/ccure-settings.png)
+
+
 
 check your nginx's sever's logs to confirm the integration is updated
 ```
