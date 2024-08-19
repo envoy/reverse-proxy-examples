@@ -22,6 +22,11 @@ nginx configuration to terminate ssl at the proxy and proxy requests to an inter
 
 High level instructions/example to use nginx to proxy request to a C-CURE 9000 server.
 
+### OnGuard
+
+Firewall rules
+HTTP methods used: GET, POST, PATCH, DELETE
+Allowed File Types: jpeg
 
 # Resources
 - https://csrc.nist.gov/publications/detail/sp/800-44/version-2/final
