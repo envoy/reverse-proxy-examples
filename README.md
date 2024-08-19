@@ -20,7 +20,7 @@ nginx configuration to terminate ssl at the proxy and proxy requests to an inter
 
 ### CCURE
 
-High level instructions/example to use nginx to proxy request to a C-CURE 9000 server.
+High level instructions/example to use nginx to proxy request to a C-CURE 9000 server (or other on-prem ACS server).
 
 ### OnGuard
 
