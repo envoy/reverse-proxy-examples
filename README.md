@@ -27,7 +27,7 @@ High level instructions/example to use nginx to proxy request to a C-CURE 9000 s
 Firewall rules
 >
 >HTTP methods used: GET, POST, PATCH, DELETE
-Allowed File Types: jpeg
+>Allowed File Types: jpeg
 
 # Resources
 - https://csrc.nist.gov/publications/detail/sp/800-44/version-2/final
