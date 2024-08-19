@@ -18,7 +18,7 @@ arbitrary port. suitable for testing and confirming internal firewall routes are
 
 nginx configuration to terminate ssl at the proxy and proxy requests to an internal service over http.
 
-### ccure
+### CCURE
 
 High level instructions/example to use nginx to proxy request to a C-CURE 9000 server.
 
