@@ -22,6 +22,10 @@ nginx configuration to terminate ssl at the proxy and proxy requests to an inter
 
 High level instructions/example to use nginx to proxy request to a C-CURE 9000 server (or other on-prem ACS server).
 
+### Genetec
+
+High level instructions/example to use nginx to proxy requests to an on-prem Genetec Security Center (Web SDK) server.
+
 ### OnGuard
 
 Firewall rules
